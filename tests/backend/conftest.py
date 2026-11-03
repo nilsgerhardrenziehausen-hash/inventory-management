@@ -14,6 +14,15 @@ sys.path.insert(0, str(server_path))
 from main import app
 
 
+@pytest.fixture(autouse=True)
+def reset_restocking_orders():
+    """Clear in-memory restocking orders so tests stay independent."""
+    import mock_data
+    mock_data.restocking_orders.clear()
+    yield
+    mock_data.restocking_orders.clear()
+
+
 @pytest.fixture
 def client():
     """Create a test client for the FastAPI application."""
