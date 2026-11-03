@@ -6,6 +6,7 @@ export default {
     orders: 'Orders',
     finance: 'Finance',
     demandForecast: 'Demand Forecast',
+    restocking: 'Restocking',
     companyName: 'Catalyst Components',
     subtitle: 'Inventory Management System'
   },
@@ -112,6 +113,8 @@ export default {
     onTimeDelivery: 'On-Time Delivery',
     itemsCount: '{count} items',
     quantity: 'Qty',
+    submittedOrders: 'Submitted Orders',
+    noSubmittedOrders: 'No restocking orders have been submitted yet.',
     table: {
       orderNumber: 'Order Number',
       orderId: 'Order ID',
@@ -125,8 +128,43 @@ export default {
       totalValue: 'Total Value',
       status: 'Status',
       expectedDelivery: 'Expected Delivery',
-      actualDelivery: 'Actual Delivery'
+      actualDelivery: 'Actual Delivery',
+      leadTime: 'Lead Time',
+      submittedDate: 'Submitted',
+      days: '{count} days'
     }
+  },
+
+  // Restocking
+  restocking: {
+    title: 'Restocking',
+    description: 'Plan a restocking order within your budget, prioritised by the largest demand shortfall',
+    budget: 'Budget',
+    plannedSpend: 'Planned Spend',
+    remainingBudget: 'Remaining Budget',
+    itemsToOrder: 'Items to Order',
+    budgetSlider: 'Restocking budget',
+    sliderMin: 'Min',
+    sliderMax: 'Restock everything',
+    currentBudget: 'Selected budget',
+    recommendations: 'Recommended Order',
+    table: {
+      sku: 'SKU',
+      item: 'Item',
+      category: 'Category',
+      trend: 'Trend',
+      shortfall: 'Shortfall',
+      orderQuantity: 'Order Qty',
+      unitCost: 'Unit Cost',
+      lineTotal: 'Line Total'
+    },
+    placeOrder: 'Place Order',
+    placingOrder: 'Placing order...',
+    noRecommendations: 'No items to restock. Either no item has a demand shortfall or the budget is too low to afford any unit.',
+    orderPlaced: 'Order {id} placed. Total cost: {total}. Expected delivery: {date}.',
+    viewOrders: 'View submitted orders',
+    orderFailed: 'Failed to place the restocking order. Please try again.',
+    loadFailed: 'Failed to load demand forecasts'
   },
 
   // Finance/Spending
@@ -204,6 +242,7 @@ export default {
     shipped: 'Shipped',
     processing: 'Processing',
     backordered: 'Backordered',
+    submitted: 'Submitted',
     inStock: 'In Stock',
     lowStock: 'Low Stock',
     adequate: 'Adequate'
